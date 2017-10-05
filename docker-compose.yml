@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  sonar:
+    image: jtim/sonarqube:6.5
+    build:
+      context: .
+    ports:
+      - 9000:9000
+    environment:
+      - SONARQUBE_WEB_CONTEXT=/sonar
